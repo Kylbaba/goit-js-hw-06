@@ -1,7 +1,25 @@
 // Задача 3. Конструктор рядків
 // Напиши клас StringBuilder, який приймає один параметр initialValue — довільний рядок, 
 // який записується у приватну властивість value об'єкта, що створюється.
-
+class StringBuilder{
+#value;
+constructor(initialValue) {
+    this.#value = initialValue; 
+  }
+  getValue() {
+    return this.#value;
+  }
+  padEnd(str) {
+    this.#value += str;
+}
+padStart(str) {
+    this.#value = str + this.#value; 
+}
+padBoth(str) {
+    this.padStart(str); 
+    this.padEnd(str);
+}
+}
 // Оголоси наступні методи класу:
 
 // getValue() — повертає поточне значення приватної властивості value.
